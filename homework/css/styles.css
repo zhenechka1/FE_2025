@@ -1,0 +1,425 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f7fa;
+    color: #333;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #666;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+section {
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    padding-top: 70px; /* Отступ под фиксированной навигацией */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+.up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.up-button:hover {
+    background: #0056b3;
+}
+
+.up-button i {
+    vertical-align: middle;
+}
+
+#home {
+    background: #e0f7fa;
+}
+
+.home-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.home-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.home-text p {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: left;
+}
+
+.home-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.home-icons img {
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.home-image {
+    flex: 1;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #e0f7fa;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.about-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-item {
+    margin-bottom: 20px;
+}
+
+.about-item h3 {
+    color: #007bff;
+    text-align: left;
+}
+
+#services {
+    background: #e0f7fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services-grid img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#pricing {
+    background: #e0f7fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card .price {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pricing-card li {
+    margin: 5px 0;
+}
+
+.pricing-card button {
+    background: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pricing-card button:hover {
+    background: #e0e0e0;
+}
+
+.contact-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #e0f7fa;
+}
+
+.contact-image {
+    flex: 1;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.contact-form h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.contact-form h3 {
+    text-align: left;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .home-content, .about-content, .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-image, .about-image, .contact-image {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .about-text, .contact-form {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .services-grid, .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    .home-icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    .home-icons img {
+        width: 40px;
+        height: 40px;
+    }
+    section {
+        padding: 30px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .services-grid, .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar {
+        padding: 15px 30px;
+    }
+    .home-content, .about-content, .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-image, .about-image, .contact-image {
+        margin-top: 20px;
+        max-width: 80%;
+    }
+    .about-text, .contact-form {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .home-icons {
+        justify-content: center;
+    }
+    section {
+        padding: 40px 20px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .services-grid, .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    section {
+        padding: 80px 100px;
+    }
+    .home-content, .about-content, .contact-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    .home-image, .about-image, .contact-image {
+        margin-top: 0;
+        max-width: 50%;
+    }
+    .about-text, .contact-form {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+}
