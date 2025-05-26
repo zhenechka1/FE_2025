@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e0e0e0;
+  overflow: auto;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-card {
+  width: 380px; 
+  padding: 18px; 
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease-in-out, z-index 0.2s ease;
+  margin-top: -85px;
+  z-index: 1;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-username {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.card-section {
+  width: 33.3%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.card-section span {
+  display: block;
+  font-size: 12px;
+  color: gray;
+}
+
+.card-actions {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  display: flex;
+  gap: 5px;
+  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.user-card:hover .card-actions {
+  right: 10px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+button {
+  padding: 7px 12px; 
+  border: none;
+  cursor: pointer;
+  font-size: 15px; 
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button.edit-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+button#save-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button#save-button:hover {
+  background-color: #218838;
+}
+
+button#save-button:active {
+  background-color: #218838;
+}
+
+.edit-form {
+  position: fixed;
+  right: -300px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: right 0.5s ease;
+  z-index: 100;
+}
+
+.edit-form.show {
+  right: 20px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  height: 40px;
+  transition: border-color 0.2s ease;
+}
+
+.edit-form input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+
+@media (max-width: 400px) {
+  .edit-form {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    right: unset;
+  }
+
+  .edit-form.show {
+    right: unset;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: #28a745;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+  z-index: 9999;
+  display: none;
+}
+
+.loader.active {
+  display: block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.easter-egg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+}
